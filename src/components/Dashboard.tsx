@@ -77,7 +77,7 @@ const Dashboard: React.FC = () => {
                 transform: 'translateY(-50%)',
               }}
             >
-              <Typography variant="h4" component="h1">
+              <Typography variant="h4" component="h1" sx={{ mb: 2, justifyContent: 'center' }}>
                 Welcome to Your Dashboard
               </Typography>
             </Box>

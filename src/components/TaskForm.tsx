@@ -14,6 +14,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar'; 
 import { Menu as MenuIcon } from '@mui/icons-material';
+import TaskIcon from '@mui/icons-material/Task';
 
 const TaskForm: React.FC = () => {
   const [taskName, setTaskName] = useState('');
@@ -39,7 +40,7 @@ const TaskForm: React.FC = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: '#f9f9f9' }}>
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <IconButton
@@ -51,8 +52,9 @@ const TaskForm: React.FC = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
-            Task
+          <TaskIcon sx={{ mr: 1, mb: 0.5 }}/>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            My Task
           </Typography>
         </Toolbar>
       </AppBar>
@@ -60,7 +62,7 @@ const TaskForm: React.FC = () => {
       <Box sx={{ display: 'flex', flexGrow: 1 }}>
         <Sidebar open={sidebarOpen} toggleSidebar={toggleSidebar} /> 
         <Box sx={{ flexGrow: 1, p: 3 }}>
-          <Card sx={{ maxWidth: '500px', width: '100%', margin: 'auto', marginLeft: '280px' }}>
+          <Card sx={{ maxWidth: '500px', width: '100%', margin: 'auto', marginLeft: '290px' }}>
             <CardContent>
               <Typography variant="h6" component="h2" align="center" gutterBottom>
                 My Task
@@ -94,7 +96,7 @@ const TaskForm: React.FC = () => {
                   </Grid>
                 </Grid>
                 <Box mt={2} sx={{ display: 'flex', justifyContent: 'center' }}>
-                  <Button onClick={handleBackToDashboard} variant="outlined" color="secondary" sx={{ mr: 2 }}>
+                  <Button onClick={handleBackToDashboard} variant="outlined" color="secondary" sx={{ backgroundColor: '#f9f9f9', mr: 2 }}>
                     Back to Dashboard
                   </Button>
                 </Box>
@@ -102,9 +104,9 @@ const TaskForm: React.FC = () => {
             </CardContent>
           </Card>
         </Box>
-        <Box sx={{ p: 3 }}>
-          <Button type="submit" variant="contained" color="primary" sx={{ mb: 2, marginLeft: '340px' }}>
-            Add Task
+        <Box sx={{ p: 2}}>
+          <Button type="submit" variant="contained" sx={{ mb: 2, marginLeft: '308.7px', bgcolor: '#0b9e71' }}>
+            Add New Task
           </Button>
         </Box>
       </Box>
