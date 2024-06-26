@@ -105,7 +105,7 @@ const ProjectForm: React.FC = () => {
           </Card>
         </Box>
         <Box sx={{ p: 2 }}>
-          <Button type="submit" variant="contained" sx={{ mb: 2, bgcolor: '#0b9e71' }}>
+          <Button type="submit" variant="contained" sx={{ mb: 2, marginLeft: '55px', bgcolor: '#0b9e71' }}>
             Add New Project
           </Button>
         </Box>
