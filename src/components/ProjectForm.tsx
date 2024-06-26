@@ -59,7 +59,7 @@ const ProjectForm: React.FC = () => {
         </Toolbar>
       </AppBar>
       <Toolbar />
-      <Box sx={{ display: 'flex', flexGrow: 1 }}>
+      <Box sx={{ display: 'flex', flexGrow: 1, marginLeft: '20px', }}>
         <Sidebar open={sidebarOpen} toggleSidebar={toggleSidebar} /> 
         <Box sx={{ flexGrow: 1, p: 3 }}>
           <Card sx={{ maxWidth: '500px', width: '100%', margin: 'auto' }}>
@@ -105,7 +105,7 @@ const ProjectForm: React.FC = () => {
           </Card>
         </Box>
         <Box sx={{ p: 2 }}>
-          <Button type="submit" variant="contained" sx={{ mb: 2, marginLeft: '55px', bgcolor: '#0b9e71' }}>
+          <Button type="submit" variant="contained" sx={{ mb: 2, marginLeft: '35px', bgcolor: '#0b9e71' }}>
             Add New Project
           </Button>
         </Box>
