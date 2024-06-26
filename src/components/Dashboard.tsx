@@ -27,10 +27,10 @@ const Dashboard: React.FC = () => {
       <Box 
         sx={{ 
           flexGrow: 1, 
-          ml: sidebarOpen ? '240px' : '0', 
+          ml: sidebarOpen ? '240px' : '1', 
           transition: 'margin-left 0.3s', 
           display: 'flex', 
-          flexDirection: 'column' 
+          flexDirection: 'column', 
         }}
       >
         <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>

@@ -24,7 +24,7 @@ const ReportForm: React.FC = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: '#f9f9f9', width: '200%' }}>
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <IconButton
@@ -42,7 +42,7 @@ const ReportForm: React.FC = () => {
         </Toolbar>
       </AppBar>
       <Toolbar />
-      <Box sx={{ display: 'flex', flexGrow: 1 }}>
+      <Box sx={{ display: 'flex', flexGrow: 1, bgcolor: '#f9f9f9' }}>
         <Sidebar open={sidebarOpen} toggleSidebar={toggleSidebar} />
         <Box
           display="flex"
@@ -51,50 +51,49 @@ const ReportForm: React.FC = () => {
           minHeight="calc(100vh - 64px)"
           sx={{ flexGrow: 1, p: 3 }}
         >
-          <Card sx={{ maxWidth: '500px', width: '100%' }}>
-            <CardContent>
-              <Typography variant="h6" component="h2" style={{ textAlign: 'center' }} gutterBottom>
-                Add New Report
-              </Typography>
-              <Box component="form" onSubmit={handleSubmit} noValidate sx={{ width: '100%' }}>
-                <Grid container spacing={2}>
-                  <Grid item xs={12}>
-                    <TextField
-                      variant="outlined"
-                      required
-                      fullWidth
-                      id="reportTitle"
-                      label="Report Title"
-                      name="reportTitle"
-                      value={reportTitle}
-                      onChange={(e) => setReportTitle(e.target.value)}
-                    />
+          <Box sx={{ maxWidth: '500px', width: '100%' }}>
+            <Card>
+              <CardContent>
+                <Typography variant="h6" component="h2" align="center" gutterBottom>
+                  Add New Report
+                </Typography>
+                <Box component="form" onSubmit={handleSubmit} noValidate sx={{ width: '100%' }}>
+                  <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                      <TextField
+                        variant="outlined"
+                        required
+                        fullWidth
+                        id="reportTitle"
+                        label="Report Title"
+                        name="reportTitle"
+                        value={reportTitle}
+                        onChange={(e) => setReportTitle(e.target.value)}
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                        variant="outlined"
+                        fullWidth
+                        id="reportContent"
+                        label="Report Content"
+                        name="reportContent"
+                        multiline
+                        rows={4}
+                        value={reportContent}
+                        onChange={(e) => setReportContent(e.target.value)}
+                      />
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      variant="outlined"
-                      fullWidth
-                      id="reportContent"
-                      label="Report Content"
-                      name="reportContent"
-                      multiline
-                      rows={4}
-                      value={reportContent}
-                      onChange={(e) => setReportContent(e.target.value)}
-                    />
-                  </Grid>
-                </Grid>
-                <Box mt={2}>
-                  <Button onClick={handleBackToDashboard} variant="outlined" color="secondary" fullWidth sx={{ mb: 2 }}>
-                    Back to Dashboard
-                  </Button>
-                  <Button type="submit" variant="contained" color="primary" fullWidth>
-                    Add Report
-                  </Button>
+                  <Box mt={2}>
+                    <Button onClick={handleBackToDashboard} variant="outlined" color="secondary" fullWidth sx={{ mb: 2 }}>
+                      Back to Dashboard
+                    </Button>
+                  </Box>
                 </Box>
-              </Box>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </Box>
         </Box>
       </Box>
     </Box>

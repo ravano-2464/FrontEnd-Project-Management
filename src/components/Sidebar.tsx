@@ -11,9 +11,10 @@ import {
 import { Link } from 'react-router-dom';
 import {
   Dashboard as DashboardIcon,
-  AddCircleOutline as AddCircleOutlineIcon,
+  AccountTreeOutlined as AccountTreeOutlinedIcon,
   Assignment as AssignmentIcon,
   Menu as MenuIcon,
+  Task as TaskIcon
 } from '@mui/icons-material';
 
 const Sidebar: React.FC<{ open: boolean; toggleSidebar: () => void }> = ({ open, toggleSidebar }) => {
@@ -31,22 +32,22 @@ const Sidebar: React.FC<{ open: boolean; toggleSidebar: () => void }> = ({ open,
         },
       }}
     >
-      <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 2 }}>
         <IconButton onClick={toggleSidebar}>
           <MenuIcon />
         </IconButton>
       </Box>
-      <List>
+      <List sx={{ marginRight: '10px' }}>
         <ListItem button component={Link} to="/" onClick={toggleSidebar}>
           <ListItemIcon><DashboardIcon /></ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItem>
-        <ListItem button component={Link} to="/addNewProject" onClick={toggleSidebar}>
-          <ListItemIcon><AddCircleOutlineIcon /></ListItemIcon>
-          <ListItemText primary="Add New Project" />
+        <ListItem button component={Link} to="/MyProjects" onClick={toggleSidebar}>
+          <ListItemIcon><AccountTreeOutlinedIcon /></ListItemIcon>
+          <ListItemText primary="Projects" />
         </ListItem>
-        <ListItem button component={Link} to="Task" onClick={toggleSidebar}>
-          <ListItemIcon><AddCircleOutlineIcon /></ListItemIcon>
+        <ListItem button component={Link} to="/MyTask" onClick={toggleSidebar}>
+          <ListItemIcon><TaskIcon /></ListItemIcon>
           <ListItemText primary="My Task" />
         </ListItem>
         <ListItem button component={Link} to="/addNewReport" onClick={toggleSidebar}>
