@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   Box,
-  Container,
   Typography,
   AppBar,
   Toolbar,
@@ -24,15 +23,6 @@ const Dashboard: React.FC = () => {
     <Box sx={{ display: 'flex', minHeight: '100vh' }}>
       <CssBaseline />
       <Sidebar open={sidebarOpen} toggleSidebar={toggleSidebar} />
-      <Box 
-        sx={{ 
-          flexGrow: 1, 
-          ml: sidebarOpen ? '240px' : '1', 
-          transition: 'margin-left 0.3s', 
-          display: 'flex', 
-          flexDirection: 'column', 
-        }}
-      >
         <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
           <Toolbar>
             <IconButton
@@ -62,29 +52,21 @@ const Dashboard: React.FC = () => {
             transition: 'all 0.3s ease',
           }}
         >
-          <Container>
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textAlign: 'center',
-                marginLeft: 'auto',
-                width: '100%',
-                position: 'relative-relative',
-                top: '50%',
-                transform: 'translateY(-50%)',
-              }}
-            >
-              <Typography variant="h4" component="h1" sx={{ mb: 2, justifyContent: 'center' }}>
-                Welcome to Your Dashboard
-              </Typography>
-            </Box>
-          </Container>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              textAlign: 'center',
+            }}
+          >
+            <Typography variant="h4" component="h1" sx={{ mb: 2, ml: 35 }}>
+              Welcome to Your Dashboard
+            </Typography>
+          </Box>
         </Box>
       </Box>
-    </Box>
   );
 };
 
