@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom';
 import {
   Dashboard as DashboardIcon,
   AccountTreeOutlined as AccountTreeOutlinedIcon,
-  Assignment as AssignmentIcon,
   Menu as MenuIcon,
   Task as TaskIcon
 } from '@mui/icons-material';
@@ -49,10 +48,6 @@ const Sidebar: React.FC<{ open: boolean; toggleSidebar: () => void }> = ({ open,
         <ListItem button component={Link} to="/MyTask" onClick={toggleSidebar}>
           <ListItemIcon><TaskIcon /></ListItemIcon>
           <ListItemText primary="My Task" />
-        </ListItem>
-        <ListItem button component={Link} to="/addNewReport" onClick={toggleSidebar}>
-          <ListItemIcon><AssignmentIcon /></ListItemIcon>
-          <ListItemText primary="Add New Report" />
         </ListItem>
       </List>
     </Drawer>
