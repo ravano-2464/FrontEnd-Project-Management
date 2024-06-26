@@ -14,7 +14,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar'; 
 import { Menu as MenuIcon } from '@mui/icons-material';
-import AssignmentIcon from '@mui/icons-material/Assignment';
+import ProjectIcon from '@mui/icons-material/AccountTree';
 
 const ProjectForm: React.FC = () => {
   const [projectName, setProjectName] = useState('');
@@ -52,7 +52,7 @@ const ProjectForm: React.FC = () => {
           >
             <MenuIcon />
           </IconButton>
-          <AssignmentIcon sx={{ mr: 1, mb: 0.5 }}/>
+          <ProjectIcon sx={{ mr: 1, mb: 0.5, mt: 0.5 }}/>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Projects
           </Typography>
