@@ -93,8 +93,8 @@ const TaskForm: React.FC = () => {
                     />
                   </Grid>
                 </Grid>
-                <Box mt={2} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                  <Button onClick={handleBackToDashboard} variant="outlined" color="secondary" sx={{ mr: 2, textAlign: 'center', justifyContent: 'center' }}>
+                <Box mt={2} sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <Button onClick={handleBackToDashboard} variant="outlined" color="secondary" sx={{ mr: 2 }}>
                     Back to Dashboard
                   </Button>
                 </Box>
