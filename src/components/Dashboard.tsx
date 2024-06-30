@@ -61,12 +61,12 @@ const Dashboard: React.FC = () => {
               textAlign: 'center',
             }}
           >
-            <Typography variant="h4" component="h1" sx={{ mb: 2, ml: 40 }}>
-              Welcome To Dashboard
-            </Typography>
+              <Typography variant="h4" component="h1" sx={{ mb: 2, ml: 40 }}>
+                Welcome To Dashboard
+              </Typography>
+            </Box>
           </Box>
         </Box>
-      </Box>
   );
 };
 
